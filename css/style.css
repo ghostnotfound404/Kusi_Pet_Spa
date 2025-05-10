@@ -1,3 +1,15 @@
+:root {
+  /* Nueva paleta de colores Kusi Pets Spa */
+  --verde-serenidad: #63d7bd;
+  --beige-organico: #F4E6D4;
+  --azul-cielo: #A7C5D9;
+  --terracota: #D89D6A;
+  --coral: #FF6B6B;
+  --gris-ceniza: #5D5D5D;
+  --blanco-nube: #F9F9F9;
+  --blanco: #FFFFFF;
+}
+
 /* Estilos generales */
 * {
     margin: 0;
@@ -8,7 +20,8 @@
 
 body {
     line-height: 1.6;
-    color: #333;
+    color: var(--gris-ceniza);
+    background-color: var(--blanco-nube);
 }
 
 .container {
@@ -20,12 +33,12 @@ body {
 
 /* Header y navegación */
 header {
-    background-color: #ff8c42;
+    background-color: var(--verde-serenidad);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(143, 185, 168, 0.1);
 }
 
 nav {
@@ -37,7 +50,7 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: var(--blanco);
     text-decoration: none;
 }
 
@@ -51,22 +64,22 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--blanco);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f0f0f0;
+    color: var(--azul-cielo);
 }
 
-/* Hero Section con imagen a la derecha - Versión mejorada */
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     padding: 100px 0;
-    background-color: #fff8f2;
+    background-color: var(--beige-organico);
     position: relative;
     overflow: hidden;
 }
@@ -75,20 +88,20 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap; /* Evita que se envuelva en desktop */
+    flex-wrap: nowrap;
 }
 
 .hero-content {
-    flex: 0 1 55%; /* Ocupa 55% del espacio */
+    flex: 0 1 55%;
     padding-right: 5%;
     z-index: 2;
 }
 
 .hero-image-container {
-    flex: 0 1 40%; /* Ocupa 40% del espacio */
+    flex: 0 1 40%;
     position: relative;
     display: flex;
-    justify-content: flex-end; /* Alinea la imagen a la derecha */
+    justify-content: flex-end;
 }
 
 .hero-image-curved {
@@ -100,8 +113,8 @@ nav {
 .hero-image-curved img {
     width: 100%;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    box-shadow: 20px 20px 0px #ff8c42;
-    border: 8px solid white;
+    box-shadow: 20px 20px 0px var(--terracota);
+    border: 8px solid var(--blanco);
     transform: rotate(-5deg);
     transition: all 0.5s ease;
     object-fit: cover;
@@ -113,38 +126,37 @@ nav {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
 
-/* Texto y botón (se mantienen igual) */
 .hero h1 {
     font-size: 2.8rem;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--gris-ceniza);
     line-height: 1.2;
     font-weight: 700;
 }
 
 .hero h1 .highlight {
-    color: #ff8c42;
+    color: var(--verde-serenidad);
 }
 
 .hero h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #555;
+    color: var(--gris-ceniza);
     font-weight: 400;
 }
 
 .hero .tagline {
     font-size: 1.3rem;
     margin-bottom: 30px;
-    color: #666;
+    color: var(--gris-ceniza);
     font-style: italic;
 }
 
 .btn {
     display: inline-block;
     padding: 15px 40px;
-    background-color: #ff8c42;
-    color: white;
+    background-color: var(--coral);
+    color: var(--blanco);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -154,16 +166,16 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(255,140,66,0.3);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
 
 .btn:hover {
-    background-color: #e67e3b;
+    background-color: var(--terracota);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255,140,66,0.4);
+    box-shadow: 0 8px 20px rgba(216, 157, 106, 0.4);
 }
 
-/* Responsive: Solo se apila en móviles */
+/* Responsive */
 @media (max-width: 768px) {
     .hero .container {
         flex-direction: column;
@@ -186,7 +198,7 @@ nav {
     }
     
     .hero-image-curved img {
-        box-shadow: 10px 10px 0px #ff8c42;
+        box-shadow: 10px 10px 0px var(--terracota);
     }
     
     .hero h1 {
@@ -201,9 +213,11 @@ nav {
         font-size: 1.1rem;
     }
 }
+
 /* Servicios */
 .services {
     padding: 60px 0;
+    background-color: var(--blanco);
 }
 
 .services-grid {
@@ -219,12 +233,12 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    background: white;
+    background: var(--blanco);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(143, 185, 168, 0.15);
 }
 
 .service-card img {
@@ -235,17 +249,17 @@ nav {
 
 .service-card h3 {
     margin-bottom: 15px;
-    color: #ff8c42;
+    color: var(--verde-serenidad);
 }
 
 .service-card p {
-    color: #666;
+    color: var(--gris-ceniza);
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--verde-serenidad);
+    color: var(--blanco);
     padding: 40px 0;
     text-align: center;
 }
@@ -264,29 +278,30 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 20px;
-    color: #ff8c42;
+    color: var(--blanco);
 }
 
 .footer-section p, .footer-section a {
-    color: #ddd;
+    color: var(--blanco);
     margin-bottom: 10px;
     display: block;
     text-decoration: none;
 }
 
 .footer-section a:hover {
-    color: #ff8c42;
+    color: var(--azul-cielo);
 }
 
 .copyright {
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #555;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Estilos para página "Por qué elegirnos" */
 .features {
     padding: 80px 0;
+    background-color: var(--azul-cielo);
 }
 
 .feature-box {
@@ -318,7 +333,7 @@ footer {
 }
 
 .feature-content h2 {
-    color: #ff8c42;
+    color: var(--verde-serenidad);
     margin-bottom: 20px;
 }
 
@@ -326,6 +341,7 @@ footer {
 .team {
     padding: 80px 0;
     text-align: center;
+    background-color: var(--blanco);
 }
 
 .team-members {
@@ -347,29 +363,30 @@ footer {
     max-width: 300px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 5px solid #ff8c42;
+    border: 5px solid var(--verde-serenidad);
 }
 
 .team-member h3 {
-    color: #ff8c42;
+    color: var(--terracota);
     margin-bottom: 10px;
 }
 
 /* Estilos para FAQ */
 .faq {
     padding: 80px 0;
+    background-color: var(--blanco);
 }
 
 .faq-item {
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--beige-organico);
     border-radius: 5px;
     overflow: hidden;
 }
 
 .faq-question {
     padding: 15px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--beige-organico);
     cursor: pointer;
     font-weight: bold;
     display: flex;
@@ -378,7 +395,8 @@ footer {
 }
 
 .faq-question:hover {
-    background-color: #f0f0f0;
+    background-color: var(--azul-cielo);
+    color: var(--blanco);
 }
 
 .faq-answer {
@@ -398,6 +416,7 @@ footer {
     padding: 80px 0;
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--blanco);
 }
 
 .contact-info {
@@ -407,7 +426,7 @@ footer {
 }
 
 .contact-info h2 {
-    color: #ff8c42;
+    color: var(--verde-serenidad);
     margin-bottom: 30px;
 }
 
@@ -435,7 +454,7 @@ footer {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--beige-organico);
     border-radius: 5px;
 }
 
@@ -453,7 +472,7 @@ footer {
 /* Why Us Section */
 .why-us {
     padding: 80px 0;
-    background-color: #fff8f2;
+    background-color: var(--beige-organico);
 }
 
 /* Team Section */
@@ -463,13 +482,13 @@ footer {
 
 .section-subtitle {
     text-align: center;
-    color: #666;
+    color: var(--gris-ceniza);
     margin-bottom: 50px;
     font-size: 1.2rem;
 }
 
 .our-story {
-    background: white;
+    background: var(--blanco);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -478,7 +497,7 @@ footer {
 }
 
 .our-story h2 {
-    color: #ff8c42;
+    color: var(--terracota);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -522,7 +541,7 @@ footer {
     }
     
     .hero-image-curved img {
-        box-shadow: 10px 10px 0px #ff8c42;
+        box-shadow: 10px 10px 0px var(--terracota);
         max-width: 300px;
     }
     
@@ -596,19 +615,19 @@ footer {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff8c42;
+    border: 3px solid var(--verde-serenidad);
     margin-bottom: 8px;
 }
 
 .team-member-preview h4 {
     font-size: 1rem;
-    color: #ff8c42;
+    color: var(--coral);
     margin-bottom: 5px;
 }
 
 .team-member-preview p {
     font-size: 0.8rem;
-    color: #666;
+    color: var(--gris-ceniza);
 }
 
 /* Asegurar que todas las tarjetas tengan la misma altura */
