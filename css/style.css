@@ -355,44 +355,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Estilos para página individual de equipo */
-.team-profile {
-    padding: 80px 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.profile-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-    padding: 20px;
-}
-
-.profile-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-.profile-content {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-}
-
-.profile-content h1 {
-    color: #ff8c42;
-    margin-bottom: 20px;
-}
-
-.profile-content h2 {
-    color: #666;
-    margin-bottom: 30px;
-    font-size: 1.3rem;
-}
-
 /* Estilos para FAQ */
 .faq {
     padding: 80px 0;
