@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacunas - Kusi Pets Spa</title>
+    <link rel="stylesheet" href="./css/vacunas.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="vaccines-section" id="vacunas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Programa de Vacunación</h2>
+                <p class="section-subtitle">Protege a tu mascota con nuestro plan de vacunación completo</p>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="caninos">Para Perros</button>
+                    <button class="tab-btn" data-tab="felinos">Para Gatos</button>
+                    <button class="tab-btn" data-tab="calendario">Calendario</button>
+                </div>
+
+                <div class="tab-content active" id="caninos">
+                    <div class="vaccine-cards">
+                        <div class="vaccine-card">
+                            <div class="card-icon">🐶</div>
+                            <h3>Vacunas Básicas</h3>
+                            <ul>
+                                <li>Moquillo canino</li>
+                                <li>Parvovirus</li>
+                                <li>Hepatitis infecciosa</li>
+                                <li>Rabia</li>
+                            </ul>
+                            <span class="recommended-tag">Esencial</span>
+                        </div>
+
+                        <div class="vaccine-card">
+                            <div class="card-icon">🏥</div>
+                            <h3>Vacunas Recomendadas</h3>
+                            <ul>
+                                <li>Leptospirosis</li>
+                                <li>Bordetella</li>
+                                <li>Enfermedad de Lyme</li>
+                                <li>Influenza canina</li>
+                            </ul>
+                        </div>
+
+                        <div class="vaccine-card highlight">
+                            <div class="card-icon">⭐</div>
+                            <h3>Paquete Completo</h3>
+                            <ul>
+                                <li>Todas las vacunas básicas</li>
+                                <li>Vacunas recomendadas</li>
+                                <li>Desparasitación</li>
+                                <li>Chequeo general</li>
+                            </ul>
+                            <span class="price-tag">$199.900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="felinos">
+                    <div class="vaccine-cards">
+                        <div class="vaccine-card">
+                            <div class="card-icon">🐱</div>
+                            <h3>Vacunas Básicas</h3>
+                            <ul>
+                                <li>Panleucopenia</li>
+                                <li>Herpesvirus</li>
+                                <li>Calicivirus</li>
+                                <li>Rabia</li>
+                            </ul>
+                            <span class="recommended-tag">Esencial</span>
+                        </div>
+
+                        <div class="vaccine-card">
+                            <div class="card-icon">🏡</div>
+                            <h3>Para Gatos Indoor</h3>
+                            <ul>
+                                <li>Leucemia felina</li>
+                                <li>Peritonitis infecciosa</li>
+                                <li>Clamidiasis</li>
+                            </ul>
+                        </div>
+
+                        <div class="vaccine-card highlight">
+                            <div class="card-icon">⭐</div>
+                            <h3>Paquete Completo</h3>
+                            <ul>
+                                <li>Todas las vacunas básicas</li>
+                                <li>Vacunas para indoor</li>
+                                <li>Desparasitación</li>
+                                <li>Chequeo general</li>
+                            </ul>
+                            <span class="price-tag">$179.900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="calendario">
+                    <div class="schedule-container">
+                        <h3 class="schedule-title">Calendario de Vacunación</h3>
+                        <div class="schedule-tabs">
+                            <button class="schedule-btn active" data-schedule="cachorros">Cachorros</button>
+                            <button class="schedule-btn" data-schedule="adultos">Adultos</button>
+                        </div>
+
+                        <div class="schedule-content active" id="cachorros">
+                            <table class="vaccine-table">
+                                <thead>
+                                    <tr>
+                                        <th>Edad</th>
+                                        <th>Vacuna</th>
+                                        <th>Refuerzo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>6-8 semanas</td>
+                                        <td>Primera vacuna múltiple</td>
+                                        <td>Cada 3-4 semanas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12 semanas</td>
+                                        <td>Rabia</td>
+                                        <td>Anual</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16 semanas</td>
+                                        <td>Vacuna múltiple final</td>
+                                        <td>Anual</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="schedule-content" id="adultos">
+                            <table class="vaccine-table">
+                                <thead>
+                                    <tr>
+                                        <th>Frecuencia</th>
+                                        <th>Vacuna</th>
+                                        <th>Importancia</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Anual</td>
+                                        <td>Refuerzo múltiple</td>
+                                        <td>Alta</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anual</td>
+                                        <td>Rabia</td>
+                                        <td>Obligatoria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cada 6 meses</td>
+                                        <td>Leptospirosis</td>
+                                        <td>Recomendada</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vaccine-cta">
+                <h3>¿Necesitas asesoría sobre vacunas?</h3>
+                <p>Nuestros veterinarios te guiarán en el plan perfecto para tu mascota</p>
+                <a href="https://wa.link/o416qa" class="btn cta-btn" target="_blank">Agendar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/vacunas.js"></script>
+    <script src="js/smoothScroll.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

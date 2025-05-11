@@ -1,0 +1,310 @@
+:root {
+  --verde-serenidad: #7ed6c1;
+  --beige-organico: #FFFFFF;
+  --azul-cielo: #000000;
+  --terracota: #e4832f;
+  --coral: #FF6F13;
+  --gris-ceniza: #3a3a3a;
+  --blanco-nube: #F9F9F9;
+  --blanco: #FFFFFF;
+}
+
+/* Estilos generales de la sección */
+.vaccines-section {
+    padding: 80px 0;
+    background-color: var(--blanco-nube);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: var(--verde-serenidad);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: var(--gris-ceniza);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Pestañas */
+.tabs-container {
+    background: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(126, 214, 193, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid var(--blanco-nube);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gris-ceniza);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--verde-serenidad);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--coral);
+}
+
+.tab-btn:hover {
+    background-color: var(--blanco-nube);
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Tarjetas de vacunas */
+.vaccine-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.vaccine-card {
+    background: var(--blanco);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--verde-serenidad);
+    position: relative;
+}
+
+.vaccine-card.highlight {
+    border-top: 4px solid var(--coral);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 111, 19, 0.1);
+}
+
+.vaccine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(126, 214, 193, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--verde-serenidad);
+}
+
+.vaccine-card h3 {
+    color: var(--azul-cielo);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.vaccine-card ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.vaccine-card li {
+    margin-bottom: 8px;
+    color: var(--gris-ceniza);
+    position: relative;
+}
+
+.vaccine-card li::before {
+    content: '•';
+    color: var(--verde-serenidad);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.recommended-tag {
+    display: inline-block;
+    background-color: var(--verde-serenidad);
+    color: var(--blanco);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.price-tag {
+    display: inline-block;
+    background-color: var(--coral);
+    color: var(--blanco);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Calendario de vacunación */
+.schedule-container {
+    margin-top: 20px;
+}
+
+.schedule-title {
+    color: var(--verde-serenidad);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.schedule-btn {
+    padding: 10px 25px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gris-ceniza);
+    transition: all 0.3s ease;
+}
+
+.schedule-btn.active {
+    color: var(--verde-serenidad);
+    border-bottom: 2px solid var(--coral);
+}
+
+.schedule-content {
+    display: none;
+}
+
+.schedule-content.active {
+    display: block;
+}
+
+.vaccine-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.vaccine-table th {
+    background-color: var(--verde-serenidad);
+    color: var(--blanco);
+    padding: 12px;
+    text-align: left;
+}
+
+.vaccine-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--blanco-nube);
+    color: var(--gris-ceniza);
+}
+
+.vaccine-table tr:nth-child(even) {
+    background-color: var(--blanco-nube);
+}
+
+.vaccine-table tr:hover {
+    background-color: rgba(126, 214, 193, 0.1);
+}
+
+/* CTA */
+.vaccine-cta {
+    text-align: center;
+    background-color: var(--verde-serenidad);
+    padding: 40px;
+    border-radius: 12px;
+    color: var(--blanco);
+    margin-top: 40px;
+}
+
+.vaccine-cta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.vaccine-cta p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--coral);
+    color: var(--blanco);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--terracota);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 111, 19, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        padding: 12px;
+    }
+    
+    .vaccine-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .vaccine-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
